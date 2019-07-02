@@ -3,10 +3,12 @@ class UserService {
     constructor($http,$rootScope,$state){
         this.user = null;
         this.http = $http;
-        this.loginUrl='/api/login';
-        this.registerUrl='/api/register';
         this.rootScope=$rootScope;
         this.state=$state;
+        //URLs
+        this.loginUrl='/api/login';
+        this.registerUrl='/api/register';
+        this.getUsersUrl='/api/';
     }
 
     login(user){

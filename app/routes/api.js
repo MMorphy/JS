@@ -6,7 +6,7 @@ module.exports=function (express,jwt,secret,bcrypt) {
         res.json({msg: 'Hello!'})
     });
 
-    //User management
+    //Login/Register
     router.route('/login').post(async function (req, res) {
     let pool = require('../../db');
         try{
@@ -53,6 +53,7 @@ module.exports=function (express,jwt,secret,bcrypt) {
         }
     });
 
+    //User management
     router.route('/users')
         .get(async function (req, res) {
         let pool = require('../../db');
@@ -158,5 +159,9 @@ module.exports=function (express,jwt,secret,bcrypt) {
             return res.json({status: 200, message: "Successful item delete!", deleteId:req.params.id});
         }
     });
+
+    //Category management
+
+    //Order management
     return router;
 };

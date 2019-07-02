@@ -6,7 +6,7 @@ tvzStore.component('navBar', {
               <li class="nav-link"><a ui-sref="register" ng-show="!c.isLoggedIn"> Registration</a></li>       
               <li class="nav-link"><a ui-sref="login" ng-show="!c.isLoggedIn">Login</a></li>    
               <li class="nav-link"><a ng-show="c.isLoggedIn" ng-click="c.logout()">Logout</a></li>
-              <li class="nav-link"><a ui-sref="login" ng-show="c.isAdmin">User Administration</li>
+              <li class="nav-link"><a ui-sref="admin" ng-show="c.isAdmin">Administration</li>
             </ul>
        </div>      
    `,

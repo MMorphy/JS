@@ -8,6 +8,9 @@ tvzStore.config(function ($stateProvider,$urlRouterProvider) {
     }).state('register',{
         url:'/register',
         component:'register'
+    }).state('admin',{
+        url:'/admin',
+        component:'administration'
     });
     $urlRouterProvider.otherwise('/');
 })
