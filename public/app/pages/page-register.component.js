@@ -1,7 +1,6 @@
 tvzStore.component('register',{
     templateUrl:'./pages/page-register.template.html',
     controller:function ($scope, UserService) {
-        this.isAdmin = UserService.isAdmin;
         this.onSubmit = function (event, values) {
             this.message = '';
             console.log(values);
@@ -21,6 +20,8 @@ tvzStore.component('register',{
             }
             $scope.$on('invalidRegister', (e,d) =>{
                 console.log("Error on registration");
+                if (d == "Duplicate user")
+                    this.message="Username already taken."
             })
         }
     },

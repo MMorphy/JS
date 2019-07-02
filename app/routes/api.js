@@ -3,12 +3,14 @@ module.exports=function (express,jwt,secret,bcrypt) {
     const router = express.Router();
 
     router.get('/', (req,res) => {
-        res.json({msg: 'Test'})
+        res.json({msg: 'Hello!'})
     });
 
+    //User management
     router.route('/login').post(async function (req, res) {
     let pool = require('../../db');
         try{
+            console.log("api body" + JSON.stringify(req.body));
             let rs = await pool.query('SELECT * FROM user WHERE username=?', req.body.data.username);
             if (rs.length == 0) {
                 return res.json({status:400, message:"Invalid username/password"})
@@ -33,13 +35,11 @@ module.exports=function (express,jwt,secret,bcrypt) {
 
     router.route('/register').post(async function (req, res) {
         let pool = require('../../db');
-        let data = JSON.stringify(req.body.data);
-        console.log("Ja sam u api.js: " + data);
-        console.log("Ja sam datin passowrd" + JSON.stringify(data.password));
-        let username = data.username;
-        let password = await bcrypt.hash(data.password, 10);
+        console.log(req.body);
+        let username = req.body.data.username;
+        let password = await bcrypt.hash(req.body.data.password, 10);
         try {
-            let rs = await pool.query('SELECT * FROM user WHERE username=?', data.username,);
+            let rs = await pool.query('SELECT * FROM user WHERE username=?', username,);
             if (rs.length > 0) {
                 res.json({status: 100, message: "Duplicate user"});
             } else {
@@ -53,7 +53,50 @@ module.exports=function (express,jwt,secret,bcrypt) {
         }
     });
 
-    router.route('/items').get(async function (req, res) {
+    router.route('/users')
+        .get(async function (req, res) {
+        let pool = require('../../db');
+        try{
+            let rs = await pool.query('SELECT * FROM user');
+            res.json({status: 200, items:rs});
+        } catch (e){
+            console.log(e);
+            return res.json({status:500, message:"Internal Server Error"})
+        }
+    }).put(async function (req,res){
+        try{
+            let pool = require('../../db');
+            let password = await bcrypt.hash(req.body.data.password, 10);
+            let userToUpdate = {
+                username: req.body.data.username,
+                password: password,
+                admin: req.body.data.admin
+            }
+            let rs = await pool.query('UPDATE user SET ? WHERE username = ?', [userToUpdate, userToUpdate.username]);
+            return res.json({status: 200, message: "Successful item update!", updateUsername:userToUpdate.username});
+        } catch (e) {
+            console.log(e);
+            return res.json({status: 500, message: "Internal Server Error"})
+        }
+
+    });
+    router.route('/users/:username')
+        .delete(async function (req,res){
+        let pool = require('../../db');
+        console.log()
+        if (req.params.username == null){
+            console.log("No params")
+            return res.json({status: 400, message: "Bad request"});
+        }
+        else {
+            let rs = await pool.query('DELETE FROM user WHERE username = ?', req.params.username);
+            return res.json({status: 200, message: "Successful user delete!", deleteId:req.params.username});
+        }
+    });
+
+    //Item management
+    router.route('/items')
+        .get(async function (req, res) {
         let pool = require('../../db');
         try{
             let rs = await pool.query('SELECT * FROM item');
@@ -104,7 +147,8 @@ module.exports=function (express,jwt,secret,bcrypt) {
         }
 
     });
-    router.route('/items/:id').delete(async function (req,res){
+    router.route('/items/:id')
+        .delete(async function (req,res){
         let pool = require('../../db');
         if (req.params.id == null){
             return res.json({status: 400, message: "Bad request"});

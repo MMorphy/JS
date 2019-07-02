@@ -1,21 +1,22 @@
 class UserService {
 
-    constructor($http,$rootScope,ApiInterface,$state){
+    constructor($http,$rootScope,$state){
         this.user = null;
+        this.http = $http;
         this.loginUrl='/api/login';
         this.registerUrl='/api/register';
         this.rootScope=$rootScope;
-        this.api=ApiInterface;
         this.state=$state;
     }
 
     login(user){
-        this.api.doPost(this.loginUrl,{user:user}).then(r => {
+        this.http.post(this.loginUrl,{data:user}).then(r => {
             if (r.data.status==100){
+                console.log(r.data.user);
                 this.user=r.data.user;
                 sessionStorage.setItem('auth',true);
                 sessionStorage.setItem('loggedUser', JSON.stringify(this.user));
-                this.state.go('home');
+                this.rootScope.$broadcast('validLogin');
             }
             else{
                 this.rootScope.$broadcast('invalidLogin', r.data.message);
@@ -31,10 +32,9 @@ class UserService {
     }
     register(user) {
         console.log("User service: " + user)
-        this.api.doPost(this.registerUrl, {data:user}).then(r => {
+        this.http.post(this.registerUrl, {data:user}).then(r => {
             if (r.data.status == 100) {
                 this.rootScope.$broadcast('invalidRegister', r.data.message);
-                this.state.go('register');
             } else if (r.data.status == 200) {
                 this.rootScope.$broadcast('validRegister');
                 this.state.go('login');
@@ -42,9 +42,9 @@ class UserService {
         });
     }
     isLoggedIn(){
-        if ((sessionStorage.getItem('auth')) || this.user != null)
+        if (sessionStorage.length == 2)
         {
-            this.user = JSON.stringify(sessionStorage.getItem('loggedUser'));
+            this.user = JSON.parse(sessionStorage.getItem('loggedUser'));
             return true;
         }
         else
@@ -52,9 +52,8 @@ class UserService {
             return false;
         }
     }
-    isAdmin(){
-        console.log(this.user.admin);
+    getUsers(){
+        this.http.get
     }
-
 }
 tvzStore.service('UserService', UserService);
