@@ -1,0 +1,1 @@
+let tvzStore = angular.module('app', ['ui.router'])

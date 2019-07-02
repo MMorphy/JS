@@ -1,0 +1,21 @@
+<div>
+    <form name="formValues" ng-submit="c.onSubmit($event, formValues)" novalidate>
+        <fieldset class="form-group" ng-class="{ 'has-error' : data.username.$invalid && !data.username.$pristine }">
+            <label>Username:</label>
+            <input name="username" placeholder="Username" class="form-control" type="text" ng-model="c.data.username" required/>
+            <p ng-show="data.username.$invalid && !data.username.$pristine" class="help-block">Enter username!</p>
+        </fieldset>
+        <fieldset class="form-group" ng-class="{ 'has-error' : data.password.$invalid && !data.password.$pristine }">
+            <label>Password:</label>
+            <input name="password" placeholder="Password" class="form-control" type="password" ng-model="c.data.password" ng-minlength="5" required/>
+            <p ng-show="data.password.$invalid && !data.password.$pristine" class="help-block">Enter password!</p>
+        </fieldset>
+        <fieldset class="form-group" ng-class="{ 'has-error' : data.confirmPassword.$invalid && !data.confirmPassword.$pristine }">
+            <label>Confirm Password:</label>
+            <input name="confirmPassword" placeholder="Confirm Password" class="form-control" type="password" ng-model="c.data.confirmPassword" ng-minlength="5" required/>
+        </fieldset>
+
+        <div ng-show="c.message.length > 0" class="alert alert-danger">{{c.message}}</div>
+        <button type="submit" class="btn btn-primary center-block" ng-disabled="data.$invalid">Register</button>
+    </form>
+</div>

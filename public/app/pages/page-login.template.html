@@ -1,0 +1,17 @@
+<div>
+    <form name="data" ng-submit="c.onSubmit(data, $event)" novalidate>
+        <fieldset class="form-group" ng-class="{ 'has-error' : data.username.$invalid && !data.username.$pristine }">
+            <label>Username:</label>
+            <input name="username" placeholder="Username" class="form-control" type="text" ng-model="c.user.username" required/>
+            <p ng-show="data.username.$invalid && !data.username.$pristine" class="help-block">Enter username!</p>
+        </fieldset>
+        <fieldset class="form-group" ng-class="{ 'has-error' : data.password.$invalid && !data.password.$pristine }">
+            <label>Password:</label>
+            <input name="password" placeholder="Password" class="form-control" type="password" ng-model="c.user.password" ng-minlength="3" required/>
+            <p ng-show="data.password.$invalid && !data.password.$pristine" class="help-block">Enter password!</p>
+        </fieldset>
+
+        <div ng-show="c.message.length > 0" class="alert alert-danger">{{c.message}}</div>
+        <button type="submit" class="btn btn-primary center-block" ng-disabled="data.$invalid">Login</button>
+    </form>
+</div>
