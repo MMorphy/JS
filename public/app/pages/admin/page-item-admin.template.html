@@ -1,3 +1,39 @@
-<div>
-    <p>Item admin</p>
+<div class="container" style="height: 300px">
+    <h2>Item administration</h2>
+    <table class="table table-striped table-responsive-md btn-table"></table>
+        <thead>
+        <th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Available</th>
+            <th>Category</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="i in c.items">
+                <td>
+                    {{i}}
+                    {{items}}
+                </td>
+                <td>
+                    {{i.price}}
+                </td>
+                <td>
+                    {{i.available}}
+                </td>
+                <td>
+                    {{i.categoryName}}
+                </td>
+
+                <td>
+                    <button type="button" class="btn btn-indigo btn-sm m-0">Edit</button>
+                </td>
+                <td>
+                    <button type="button" class="btn btn-indigo btn-sm m-0">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
 </div>

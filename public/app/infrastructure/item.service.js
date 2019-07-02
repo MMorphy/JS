@@ -1,13 +1,15 @@
-class UserService {
+class ItemService {
 
     constructor($http,$rootScope){
         this.http=$http;
-        this.allItemsUrl='/api/login';
+        this.allItemsUrl='/api/items';
         this.registerUrl='/api/register';
         this.rootScope=$rootScope;
     }
 
-
+    getAllItems(){
+        return this.http.get(this.allItemsUrl);
+    }
 
 }
-tvzStore.service('UserService', UserService);
+tvzStore.service('ItemService', ItemService);

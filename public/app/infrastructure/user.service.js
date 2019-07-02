@@ -8,7 +8,7 @@ class UserService {
         //URLs
         this.loginUrl='/api/login';
         this.registerUrl='/api/register';
-        this.getUsersUrl='/api/';
+        this.getUsersUrl='/api/users';
     }
 
     login(user){
@@ -55,7 +55,7 @@ class UserService {
         }
     }
     getUsers(){
-        this.http.get
+        this.http.get('/api/users');
     }
 }
 tvzStore.service('UserService', UserService);

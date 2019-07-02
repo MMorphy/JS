@@ -59,7 +59,7 @@ module.exports=function (express,jwt,secret,bcrypt) {
         let pool = require('../../db');
         try{
             let rs = await pool.query('SELECT * FROM user');
-            res.json({status: 200, items:rs});
+            res.json({status: 200, users:rs});
         } catch (e){
             console.log(e);
             return res.json({status:500, message:"Internal Server Error"})
@@ -100,8 +100,8 @@ module.exports=function (express,jwt,secret,bcrypt) {
         .get(async function (req, res) {
         let pool = require('../../db');
         try{
-            let rs = await pool.query('SELECT * FROM item');
-            res.json({status: 200, items:rs});
+            let rs = await pool.query('SELECT * FROM item i JOIN category c on c.id = i.category_id');
+            return res.json({status: 200, items:rs});
         } catch (e){
             console.log(e);
             return res.json({status:500, message:"Internal Server Error"})
