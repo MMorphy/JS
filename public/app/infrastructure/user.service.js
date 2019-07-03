@@ -54,8 +54,14 @@ class UserService {
             return false;
         }
     }
-    getUsers(){
-        this.http.get('/api/users');
+    getAllUsers(){
+        return this.http.get(this.getUsersUrl);
+    }
+    deleteUser(id){
+        return this.http.delete(this.getUsersUrl+'/'+id);
+    }
+    updateUser(user){
+        return this.http.put(this.getUsersUrl,{data:user});
     }
 }
 tvzStore.service('UserService', UserService);

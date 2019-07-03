@@ -3,7 +3,6 @@ class ItemService {
     constructor($http,$rootScope){
         this.http=$http;
         this.itemsUrl='/api/items';
-        this.rootScope=$rootScope;
     }
 
     getAllItems(){

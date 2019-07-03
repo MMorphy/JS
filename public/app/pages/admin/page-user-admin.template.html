@@ -1,3 +1,41 @@
 <div class="container">
-    <p>User admin</p>
+    <section>
+        <h2>User administration</h2>
+        <table class="table table-striped table-bordered table-hover">
+            <th>Username</th>
+            <th>Password</th>
+            <th>Admin</th>
+            <th>Edit</th>
+            <th>Delete</th>
+
+<!--
+             TODO ugasi da admin sam sebe nemoze ubiti i druge admine
+-->
+            <tr ng-repeat="x in userContr.users">
+                <td>{{x.username}}</td>
+
+                <td ng-hide="userContr.editUsername==x.username">{{x.password}}</td>
+                <td ng-hide="userContr.editUsername!=x.username"><input type="password" class="form-control" ng-model="x.price"></td>
+
+                <td ng-hide="userContr.editUsername==x.username">{{x.admin}}</td>
+                <td ng-hide="userContr.editUsername!=x.username"><input type="checkbox" ng-checked="userContr.isAdmin(x.username)" class="form-control" ng-model="x.newAdmin"></td>
+
+                <td ng-hide="userContr.editUsername==x.username">
+                    <button type="button" class="btn btn-indigo btn-sm m-0" ng-click="userContr.setEdit(x.username)">Edit</button>
+                </td>
+
+                <td ng-hide="userContr.editUsername!=x.username">
+                    <button type="button" class="btn btn-indigo btn-sm m-0" ng-click="userContr.confirmEdit(x.username, x.newAdmin)">Save</button>
+                </td>
+
+                <td ng-hide="userContr.deleteUsername==x.username">
+                    <button type="button" class="btn btn-indigo btn-sm m-0" ng-click="">Delete</button>
+                </td>
+
+                <td ng-hide="userContr.deleteUsername!=x.username">
+                    <button type="button" class="btn btn-indigo btn-sm m-0" ng-click="">Confirm</button>
+                </td>
+            </tr>
+        </table>
+    </section>
 </div>
