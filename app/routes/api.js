@@ -67,11 +67,9 @@ module.exports=function (express,jwt,secret,bcrypt) {
     }).put(async function (req,res){
         try{
             let pool = require('../../db');
-            let password = await bcrypt.hash(req.body.data.password, 10);
-            let userToUpdate = {
-                username: req.body.data.username,
-                password: password,
-                admin: req.body.data.admin
+            let userToUpdate = req.body.data;
+            if (userToUpdate.password!= null) {
+                userToUpdate.password = await bcrypt.hash(req.body.data.password, 10);
             }
             let rs = await pool.query('UPDATE user SET ? WHERE username = ?', [userToUpdate, userToUpdate.username]);
             return res.json({status: 200, message: "Successful item update!", updateUsername:userToUpdate.username});

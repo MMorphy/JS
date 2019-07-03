@@ -15,7 +15,7 @@
                 <td>{{x.username}}</td>
 
                 <td ng-hide="userContr.editUsername==x.username">{{x.password}}</td>
-                <td ng-hide="userContr.editUsername!=x.username"><input type="password" class="form-control" ng-model="x.price"></td>
+                <td ng-hide="userContr.editUsername!=x.username"><input type="password" class="form-control" ng-model="x.password"></td>
 
                 <td ng-hide="userContr.editUsername==x.username">{{x.admin}}</td>
                 <td ng-hide="userContr.editUsername!=x.username"><input type="checkbox" ng-checked="userContr.isAdmin(x.username)" class="form-control" ng-model="x.newAdmin"></td>
@@ -29,11 +29,11 @@
                 </td>
 
                 <td ng-hide="userContr.deleteUsername==x.username">
-                    <button type="button" class="btn btn-indigo btn-sm m-0" ng-click="">Delete</button>
+                    <button type="button" class="btn btn-indigo btn-sm m-0" ng-click="userContr.setDelete(x.username)">Delete</button>
                 </td>
 
                 <td ng-hide="userContr.deleteUsername!=x.username">
-                    <button type="button" class="btn btn-indigo btn-sm m-0" ng-click="">Confirm</button>
+                    <button type="button" class="btn btn-indigo btn-sm m-0" ng-click="userContr.confirmDelete(x.username)">Confirm</button>
                 </td>
             </tr>
         </table>

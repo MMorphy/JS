@@ -50,6 +50,9 @@ tvzStore.component('itemAdministration',{
                     this.items.splice(this.items.findIndex(c => c.id == i),1);
                     alert('Successful item deletion!')
                 }
+                else{
+                    alert('Error while deleting item!')
+                }
             });
         };
 
