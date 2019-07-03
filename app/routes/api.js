@@ -100,28 +100,28 @@ module.exports=function (express,jwt,secret,bcrypt) {
         .get(async function (req, res) {
         let pool = require('../../db');
         try{
-            let rs = await pool.query('SELECT * FROM item i JOIN category c on c.id = i.category_id');
+            let rs = await pool.query('SELECT i.id, i.name, i.price, i.available, i.category_id, c.categoryName FROM item i JOIN category c on c.categoryId = i.category_id');
+            console.log("ItemsGet")
+            console.log(rs);
             return res.json({status: 200, items:rs});
         } catch (e){
             console.log(e);
             return res.json({status:500, message:"Internal Server Error"})
         }
     }).post(async function (req,res) {
-        if (req.body.data.item.name != null && req.body.data.item.price != null && req.body.data.item.available != null && req.body.data.item.categoryId != null) {
+        console.log(req.body);
+        if (req.body.data.name != null && req.body.data.price != null && req.body.data.available != null && req.body.data.category_id != null) {
             let pool = require('../../db');
             try{
-                let rs = await pool.query('SELECT id FROM item ORDER BY id desc LIMIT 1');
-                let itemId = rs[0].id + 1;
                 let itemToInsert = {
-                    id: itemId,
-                    name: req.body.data.item.name,
-                    price: req.body.data.item.price,
-                    available: req.body.data.item.price,
-                    categoryId: req.body.data.item.category_id
+                    name: req.body.data.name,
+                    price: req.body.data.price,
+                    available: req.body.data.available,
+                    category_id: req.body.data.category_id
                 }
 
-                let rs2 = await pool.query('INSERT INTO item SET ?', itemToInsert);
-                return res.json({status: 200, message: "Successful item insert!", insertId:itemToInsert.id});
+                let rs = await pool.query('INSERT INTO item SET ?', itemToInsert);
+                return res.json({status: 200, message: "Successful item insert!", insertId:rs[0]});
             } catch (e) {
                 console.log(e);
                 return res.json({status: 500, message: "Internal Server Error"})
@@ -134,11 +134,11 @@ module.exports=function (express,jwt,secret,bcrypt) {
         try{
             let pool = require('../../db');
             let itemToUpdate = {
-                id: req.body.data.item.id,
-                name: req.body.data.item.name,
-                price: req.body.data.item.price,
-                available: req.body.data.item.price,
-                categoryId: req.body.data.item.category_id
+                id: req.body.item.id,
+                name: req.body.item.name,
+                price: req.body.item.price,
+                available: req.body.item.available,
+                category_id: req.body.item.category_id
             }
             let rs = await pool.query('UPDATE item SET ? WHERE id = ?', [itemToUpdate, itemToUpdate.id]);
             return res.json({status: 200, message: "Successful item update!", updateId:itemToUpdate.id});
@@ -161,6 +161,60 @@ module.exports=function (express,jwt,secret,bcrypt) {
     });
 
     //Category management
+    router.route('/categories')
+        .get(async function (req, res) {
+            let pool = require('../../db');
+            try{
+                let rs = await pool.query('SELECT * FROM category');
+                return res.json({status: 200, categories:rs});
+            } catch (e){
+                console.log(e);
+                return res.json({status:500, message:"Internal Server Error"})
+            }
+        }).post(async function (req,res) {
+        if (req.body.data.category.categoryName != null) {
+            let pool = require('../../db');
+            try{
+                let categoryToInsert = {
+                    categoryName: req.body.data.category.categoryName,
+                }
+
+                let rs = await pool.query('INSERT INTO category SET ?', categoryToInsert);
+                return res.json({status: 200, message: "Successful item insert!", categoryName:categoryToInsert.categoryName});
+            } catch (e) {
+                console.log(e);
+                return res.json({status: 500, message: "Internal Server Error"})
+            }
+        }
+        else {
+            return res.json({status: 400, message: "Bad request"});
+        }
+    }).put(async function (req,res){
+        try{
+            let pool = require('../../db');
+            let categoryToUpdate = {
+                categoryId: req.body.data.category.categoryId,
+                categoryName: req.body.data.category.categoryName,
+            }
+            let rs = await pool.query('UPDATE category SET ? WHERE categoryId = ?', [categoryToUpdate, categoryToUpdate.id]);
+            return res.json({status: 200, message: "Successful item update!", updateId:categoryToUpdate.id});
+        } catch (e) {
+            console.log(e);
+            return res.json({status: 500, message: "Internal Server Error"})
+        }
+
+    });
+    router.route('/categories/:id')
+        .delete(async function (req,res){
+            let pool = require('../../db');
+            if (req.params.id == null){
+                return res.json({status: 400, message: "Bad request"});
+            }
+            else {
+                let rs = await pool.query('DELETE FROM category WHERE categoryId = ?', req.params.id);
+                return res.json({status: 200, message: "Successful item delete!", deleteId:req.params.id});
+            }
+        });
 
     //Order management
     return router;

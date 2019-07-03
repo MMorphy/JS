@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fca03b81-d5e8-4003-a093-5a485fef936b" name="Default Changelist" comment="Item administration&#10;* Zapeo na ng-repeat koji ne prikazuje">
-      <change afterPath="$PROJECT_DIR$/public/app/pages/admin/page-category-admin.component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/app/pages/admin/page-category-admin.template.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/app/pages/admin/page-order-admin.component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/app/pages/admin/page-order-admin.template.html" afterDir="false" />
+    <list default="true" id="fca03b81-d5e8-4003-a093-5a485fef936b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/app/infrastructure/category.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/routes/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/app/infrastructure/app.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/infrastructure/app.component.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/app/infrastructure/item.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/infrastructure/item.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/infrastructure/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/infrastructure/user.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/app/pages/admin/page-admin.template.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/pages/admin/page-admin.template.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/app/pages/admin/page-item-admin.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/pages/admin/page-item-admin.component.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/app/pages/admin/page-item-admin.template.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/pages/admin/page-item-admin.template.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/pages/admin/page-user-admin.template.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/pages/admin/page-user-admin.template.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,8 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-item-admin.component.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="18" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="18" />
+            <state relative-caret-position="216">
+              <caret line="68" column="34" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -56,11 +51,35 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-item-admin.template.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="357">
+              <caret line="24" column="75" selection-start-line="24" selection-start-column="75" selection-end-line="24" selection-end-column="75" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/routes/api.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="118" column="54" selection-start-line="118" selection-start-column="54" selection-end-line="118" selection-end-column="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/be.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-admin.template.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -68,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/app/infrastructure/item.service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
+            <state relative-caret-position="289">
+              <caret line="17" column="14" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -77,8 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/app/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+            <state relative-caret-position="-8">
+              <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -87,10 +106,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/routes/api.js">
+        <entry file="file://$PROJECT_DIR$/public/app/infrastructure/user.service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="155" column="9" lean-forward="true" selection-start-line="155" selection-start-column="9" selection-end-line="155" selection-end-column="9" />
+            <state relative-caret-position="-170">
+              <caret line="5" column="34" lean-forward="true" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -107,16 +126,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>mysql</find>
-      <find>pool</find>
-      <find>secret</find>
-      <find>body</find>
-      <find>config</find>
-      <find>rs[</find>
-      <find>ime</find>
-      <find>unos</find>
-      <find>password</find>
-      <find>error</find>
       <find>registe</find>
       <find>application</find>
       <find>invalidRegister</find>
@@ -137,6 +146,16 @@
       <find>profile</find>
       <find>items</find>
       <find>parse</find>
+      <find>itemId</find>
+      <find>categor</find>
+      <find>id</find>
+      <find>setEdit</find>
+      <find>c.id</find>
+      <find>editId</find>
+      <find>delete</find>
+      <find>category</find>
+      <find>.item</find>
+      <find>items[i</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -178,16 +197,17 @@
         <option value="$PROJECT_DIR$/public/app/pages/admin/page-category-admin.component.js" />
         <option value="$PROJECT_DIR$/public/app/pages/admin/page-category-admin.template.html" />
         <option value="$PROJECT_DIR$/public/app/pages/admin/page-order-admin.template.html" />
-        <option value="$PROJECT_DIR$/public/app/pages/admin/page-admin.template.html" />
         <option value="$PROJECT_DIR$/public/app/pages/admin/page-user-admin.template.html" />
         <option value="$PROJECT_DIR$/public/app/pages/admin/page-order-admin.component.js" />
-        <option value="$PROJECT_DIR$/public/app/infrastructure/app.component.js" />
-        <option value="$PROJECT_DIR$/public/app/index.html" />
         <option value="$PROJECT_DIR$/public/app/infrastructure/user.service.js" />
-        <option value="$PROJECT_DIR$/app/routes/api.js" />
+        <option value="$PROJECT_DIR$/public/app/pages/admin/page-admin.template.html" />
+        <option value="$PROJECT_DIR$/public/app/infrastructure/category.service.js" />
+        <option value="$PROJECT_DIR$/public/app/index.html" />
+        <option value="$PROJECT_DIR$/public/app/infrastructure/app.component.js" />
         <option value="$PROJECT_DIR$/public/app/infrastructure/item.service.js" />
-        <option value="$PROJECT_DIR$/public/app/pages/admin/page-item-admin.template.html" />
         <option value="$PROJECT_DIR$/public/app/pages/admin/page-item-admin.component.js" />
+        <option value="$PROJECT_DIR$/app/routes/api.js" />
+        <option value="$PROJECT_DIR$/public/app/pages/admin/page-item-admin.template.html" />
       </list>
     </option>
   </component>
@@ -206,8 +226,8 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-42" />
-    <option name="y" value="-8" />
+    <option name="x" value="-389" />
+    <option name="y" value="-13" />
     <option name="width" value="1700" />
     <option name="height" value="1070" />
   </component>
@@ -322,7 +342,8 @@
       <workItem from="1561964725997" duration="26497000" />
       <workItem from="1562078023115" duration="117000" />
       <workItem from="1562078256290" duration="11527000" />
-      <workItem from="1562101001343" duration="6226000" />
+      <workItem from="1562101001343" duration="6257000" />
+      <workItem from="1562148730421" duration="14235000" />
     </task>
     <task id="LOCAL-00001" summary="Login/Registration">
       <created>1562087115677</created>
@@ -338,11 +359,18 @@
       <option name="project" value="LOCAL" />
       <updated>1562093184919</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Item administration&#10;* Zapeo na ng-repeat koji ne prikazuje item ali itemse da">
+      <created>1562107248457</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1562107248457</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74373000" />
+    <option name="totallyTimeSpent" value="88639000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -357,8 +385,8 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4909091" visible="true" weight="0.22068231" />
-      <window_info id="Structure" order="1" sideWeight="0.5090909" side_tool="true" visible="true" weight="0.22068231" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48727274" visible="true" weight="0.2228145" />
+      <window_info id="Structure" order="1" sideWeight="0.51272726" side_tool="true" visible="true" weight="0.2228145" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
@@ -385,7 +413,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Login/Registration" />
     <MESSAGE value="Administration skeleton" />
-    <option name="LAST_COMMIT_MESSAGE" value="Administration skeleton" />
+    <MESSAGE value="Item administration&#10;* Zapeo na ng-repeat koji ne prikazuje item ali itemse da" />
+    <option name="LAST_COMMIT_MESSAGE" value="Item administration&#10;* Zapeo na ng-repeat koji ne prikazuje item ali itemse da" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/package.json" />
@@ -452,13 +481,6 @@
     <entry file="file://$PROJECT_DIR$/node_modules/node-pre-gyp/lib/util/nw-pre-gyp/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/be.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="100" lean-forward="true" selection-start-line="17" selection-start-column="100" selection-end-line="17" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/mime-types/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="569">
@@ -473,13 +495,6 @@
             <caret line="540" column="19" selection-start-line="540" selection-start-column="19" selection-end-line="540" selection-end-column="19" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/layer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="110" column="11" lean-forward="true" selection-start-line="110" selection-start-column="11" selection-end-line="110" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -550,13 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-admin.template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-order-admin.template.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -592,13 +600,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/infrastructure/app.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="2" lean-forward="true" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-user-admin.component.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -620,51 +621,83 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/infrastructure/user.service.js">
+    <entry file="file://$PROJECT_DIR$/public/app/infrastructure/app.component.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="62" selection-start-line="36" selection-start-column="62" selection-end-line="36" selection-end-column="62" />
+        <state relative-caret-position="119">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/infrastructure/category.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="34" lean-forward="true" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-admin.template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/layer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="94" column="4" selection-start-line="94" selection-start-column="4" selection-end-line="94" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+        <state relative-caret-position="-8">
+          <caret line="4" column="28" lean-forward="true" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes/api.js">
+    <entry file="file://$PROJECT_DIR$/public/app/infrastructure/user.service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="155" column="9" lean-forward="true" selection-start-line="155" selection-start-column="9" selection-end-line="155" selection-end-column="9" />
+        <state relative-caret-position="-170">
+          <caret line="5" column="34" lean-forward="true" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/infrastructure/item.service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" lean-forward="true" selection-start-column="2" selection-end-column="2" />
+        <state relative-caret-position="289">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="118" column="54" selection-start-line="118" selection-start-column="54" selection-end-line="118" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-item-admin.component.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="18" />
+        <state relative-caret-position="216">
+          <caret line="68" column="34" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-item-admin.template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="357">
+          <caret line="24" column="75" selection-start-line="24" selection-start-column="75" selection-end-line="24" selection-end-column="75" />
         </state>
       </provider>
     </entry>

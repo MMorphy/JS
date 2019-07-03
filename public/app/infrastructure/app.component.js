@@ -5,6 +5,5 @@ tvzStore.component('store',{
     <div class="col-md-9" ui-view></div>
     `,
     controller:function(){
-        console.log("TEST");
     }
 })
