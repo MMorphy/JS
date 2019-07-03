@@ -131,12 +131,13 @@ module.exports=function (express,jwt,secret,bcrypt) {
     }).put(async function (req,res){
         try{
             let pool = require('../../db');
+            console.log(req.body.data);
             let itemToUpdate = {
-                id: req.body.item.id,
-                name: req.body.item.name,
-                price: req.body.item.price,
-                available: req.body.item.available,
-                category_id: req.body.item.category_id
+                id: req.body.data.id,
+                name: req.body.data.name,
+                price: req.body.data.price,
+                available: req.body.data.available,
+                category_id: req.body.data.category_id
             }
             let rs = await pool.query('UPDATE item SET ? WHERE id = ?', [itemToUpdate, itemToUpdate.id]);
             return res.json({status: 200, message: "Successful item update!", updateId:itemToUpdate.id});
@@ -174,9 +175,8 @@ module.exports=function (express,jwt,secret,bcrypt) {
             let pool = require('../../db');
             try{
                 let categoryToInsert = {
-                    categoryName: req.body.data.category.categoryName,
-                }
-
+                    categoryName: req.body.data.categoryName,
+                };
                 let rs = await pool.query('INSERT INTO category SET ?', categoryToInsert);
                 return res.json({status: 200, message: "Successful item insert!", categoryName:categoryToInsert.categoryName});
             } catch (e) {
@@ -190,11 +190,13 @@ module.exports=function (express,jwt,secret,bcrypt) {
     }).put(async function (req,res){
         try{
             let pool = require('../../db');
+            console.log("CAT PUT")
+            console.log(req.body);
             let categoryToUpdate = {
-                categoryId: req.body.data.category.categoryId,
-                categoryName: req.body.data.category.categoryName,
+                categoryId: req.body.data.categoryId,
+                categoryName: req.body.data.categoryName,
             }
-            let rs = await pool.query('UPDATE category SET ? WHERE categoryId = ?', [categoryToUpdate, categoryToUpdate.id]);
+            let rs = await pool.query('UPDATE category SET ? WHERE categoryId = ?', [categoryToUpdate, categoryToUpdate.categoryId]);
             return res.json({status: 200, message: "Successful item update!", updateId:categoryToUpdate.id});
         } catch (e) {
             console.log(e);

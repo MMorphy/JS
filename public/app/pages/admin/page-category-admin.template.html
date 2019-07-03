@@ -1,3 +1,58 @@
 <div class="container">
-    <p>Category admin</p>
+    <section>
+        <h2>Category administration</h2>
+        <table class="table table-striped table-bordered table-hover">
+            <th>ID</th>
+            <th>Name</th>
+            <th>Edit</th>
+            <th>Delete</th>
+
+
+            <tr ng-repeat="x in categoryContr.categories">
+                <td>{{x.categoryId}}</td>
+
+                <td ng-hide="categoryContr.editId==x.categoryId">{{x.categoryName}}</td>
+                <td ng-hide="categoryContr.editId!=x.categoryId"><input type="text" class="form-control" ng-model="x.categoryName"></td>
+
+
+                <td ng-hide="categoryContr.editId==x.categoryId">
+                    <button type="button" class="btn btn-indigo btn-sm m-0" ng-click="categoryContr.setEdit(x.categoryId)">Edit</button>
+                </td>
+
+                <td ng-hide="categoryContr.editId!=x.categoryId">
+                    <button type="button" class="btn btn-indigo btn-sm m-0" ng-click="categoryContr.confirmEdit(x.categoryId, x.newCategoryId)">Save</button>
+                </td>
+
+                <td ng-hide="categoryContr.deleteId==x.categoryId">
+                    <button type="button" class="btn btn-indigo btn-sm m-0" ng-click="categoryContr.setDelete(x.categoryId)">Delete</button>
+                </td>
+
+                <td ng-hide="categoryContr.deleteId!=x.categoryId">
+                    <button type="button" class="btn btn-indigo btn-sm m-0" ng-click="categoryContr.confirmDelete(x.categoryId)">Confirm</button>
+                </td>
+            </tr>
+        </table>
+        <button type="button" ng-show="!categoryContr.isAdding()" class="btn btn-indigo btn-sm m-0" ng-click="categoryContr.flipAddCategory()">Add</button>
+
+        <div ng-show="categoryContr.isAdding()">
+
+            <fieldset class="form-group">
+                <label>Name:</label>
+                <input class="form-control" type="text" ng-model="categoryContr.new.name"/>
+            </fieldset>
+            <fieldset class="form-group">
+                <label>Price</label>
+                <input class="form-control" type="number" ng-model="categoryContr.new.price"/>
+            </fieldset>
+            <fieldset class="form-group">
+                <label>Available</label>
+                <input class="form-control" type="number" ng-model="categoryContr.new.available"/>
+            </fieldset>
+
+            <button type="button" class="btn btn-indigo btn-sm m-0" ng-click="categoryContr.addItem()">Add</button>
+            <button type="button" class="btn btn-indigo btn-sm m-0" ng-click="categoryContr.flipAddItem()">Cancel</button>
+
+
+        </div>
+    </section>
 </div>

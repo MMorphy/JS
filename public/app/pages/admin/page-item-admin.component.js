@@ -1,13 +1,24 @@
 tvzStore.component('itemAdministration',{
     templateUrl:'./pages/admin/page-item-admin.template.html',
-    controller:function ($scope, ItemService, CategoryService) {
-        ItemService.getAllItems().then(data => {
-            this.items=data.data.items;
+    controller:function ($rootScope, ItemService, CategoryService) {
+        //helper and init functions
+        this.updateItemsAndCategories = function(){
+            ItemService.getAllItems().then(data => {
+                this.items=data.data.items;
+            });
+            CategoryService.getAllCategories().then(data=>{
+                this.categories=data.data.categories;
+            });
+        };
+        $rootScope.$on('categoryChange', function (event) {
+            console.log(event);
+            console.log(this);
+            itemContr.updateItemsAndCategories();
         });
-        CategoryService.getAllCategories().then(data=>{
-            this.categories=data.data.categories;
-        });
-
+        this.findItemById = function(i){
+            return this.items.find(item=>item.id==i);
+        };
+        this.updateItemsAndCategories();
         //editing
         this.editId=-1;
         this.setEdit = function(i){
@@ -15,20 +26,20 @@ tvzStore.component('itemAdministration',{
         };
         this.confirmEdit = function(i, newId){
             let newCategory = this.categories.find(category=> category.categoryId==newId);
+            let oldItem = this.findItemById(i);
             let updatedItem={
-                id:this.items[i-1].id,
-                name:this.items[i-1].name,
-                price:this.items[i-1].price,
-                available:this.items[i-1].available,
+                id:oldItem.id,
+                name:oldItem.name,
+                price:oldItem.price,
+                available:oldItem.available,
                 category_id:newCategory.categoryId
             };
             console.log(updatedItem)
             this.editId=-1;
             ItemService.updateItem(updatedItem).then(data=>{
-                console.log(data)
+                console.log(data);
                 if(data.status==200){
-                    this.items[i-1].categoryName=newCategory.categoryName;
-                    this.items[i-1].category_id=newCategory.categoryId;
+                    this.updateItemsAndCategories();
                     alert('Successful item edit!')
                 }
                 else{
