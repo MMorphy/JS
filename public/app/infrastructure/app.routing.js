@@ -11,6 +11,21 @@ tvzStore.config(function ($stateProvider,$urlRouterProvider) {
     }).state('admin',{
         url:'/admin',
         component:'administration'
+    }).state('userAdmin',{
+        url:'/admin/user',
+        component:'userAdministration'
+    }).state('itemAdmin',{
+        url:'/admin/item',
+        component:'itemAdministration'
+    }).state('categoryAdmin',{
+        url:'/admin/category',
+        component:'categoryAdministration'
+    }).state('orderAdmin',{
+        url:'/admin/order',
+        component:'orderAdministration'
+    }).state('itemsByCategory',{
+        url:'/items/:categoryName',
+        component:'itemByCategory'
     });
     $urlRouterProvider.otherwise('/');
 })

@@ -1,20 +1,18 @@
 tvzStore.component('itemAdministration',{
     templateUrl:'./pages/admin/page-item-admin.template.html',
-    controller:function ($rootScope, ItemService, CategoryService) {
+    controller:function ($scope, ItemService, CategoryService) {
         //helper and init functions
         this.updateItemsAndCategories = function(){
             ItemService.getAllItems().then(data => {
-                this.items=data.data.items;
+                $scope.items=data.data.items;
+                this.items=$scope.items;
             });
             CategoryService.getAllCategories().then(data=>{
+                $scope.categories = data.data.categories;
                 this.categories=data.data.categories;
             });
         };
-        $rootScope.$on('categoryChange', function (event) {
-            console.log(event);
-            console.log(this);
-            itemContr.updateItemsAndCategories();
-        });
+
         this.findItemById = function(i){
             return this.items.find(item=>item.id==i);
         };

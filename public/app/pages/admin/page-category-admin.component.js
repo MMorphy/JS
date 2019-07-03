@@ -1,6 +1,6 @@
 tvzStore.component('categoryAdministration',{
     templateUrl:'./pages/admin/page-category-admin.template.html',
-    controller:function ($scope, CategoryService,$rootScope) {
+    controller:function ($scope, CategoryService,$scope) {
         //Helper and init functions
         this.updateCategories = function(){
             CategoryService.getAllCategories().then(data=>{
@@ -21,13 +21,11 @@ tvzStore.component('categoryAdministration',{
             let updatedCategory={
                 categoryId:this.findCategoryById(id).categoryId,
                 categoryName:this.findCategoryById(id).categoryName
-            }
+            };
             CategoryService.updateCategory(updatedCategory).then(data =>{
                 console.log(data);
                 if(data.status==200) {
-                    this.updateCategories();
                     alert('Successful category edit!');
-                    $rootScope.$emit('categoryChange');
                 }
                 else
                     alert('Error while editing item');
