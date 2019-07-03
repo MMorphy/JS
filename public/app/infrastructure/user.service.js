@@ -44,7 +44,7 @@ class UserService {
         });
     }
     isLoggedIn(){
-        if (sessionStorage.length == 2)
+        if (JSON.parse(sessionStorage.getItem('loggedUser'))!=null)
         {
             this.user = JSON.parse(sessionStorage.getItem('loggedUser'));
             return true;

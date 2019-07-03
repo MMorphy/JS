@@ -1,4 +1,5 @@
 tvzStore.component('sideBar', {
+    // TODO Uljepsaj ovo
     template:`
     <div id="sidebar-wrapper" class="col-lg-3 fixed" style="float: right">
         <ul class="sidebar-nav">

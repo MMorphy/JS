@@ -32,6 +32,52 @@ tvzStore.component('categoryAdministration',{
             });
         }
 
+        //deleting
+        this.deleteId=-1;
+        this.setDelete = function(i){
+            console.log(i);
+            this.deleteId=i;
+        };
+        this.confirmDelete = function(i){
+            this.deleteId=-1;
+            CategoryService.deleteCategory(i).then(data=>{
+                if (data.status==200){
+                    this.updateCategories();
+                    alert('Successful item deletion!')
+                }
+                else{
+                    alert('Error while deleting item!')
+                }
+            });
+        };
+
+        //adding
+        this.add=false;
+        this.isAdding = function() {
+            return this.add;
+        };
+        this.flipAddCategory = function () {
+            if (this.add == false){
+                this.add = true;
+            }
+            else{
+                this.add = false;
+            }
+        };
+        this.addCategory = function(){
+            console.log(this.new);
+            CategoryService.createCategory(this.new).then(data =>{
+                if (data.status==200) {
+                    this.updateCategories();
+                    this.flipAddCategory();
+                    alert("Successful category added!")
+                }
+                else{
+                    alert("Error while adding category!")
+                    this.flipAddCategory();
+                }
+            });
+        }
     },
 
     controllerAs:'categoryContr'

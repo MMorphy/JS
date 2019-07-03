@@ -4,10 +4,9 @@
         <div class="panel-body">
             Price:{{item.price}}<br>
             <a ui-sref="itemsByCategory({categoryName:item.categoryName})">{{item.categoryName}}</a><br>
-            Quantity:{{item.price}}
+            Quantity:{{item.available}}
         </div>
-
-
-        <button type="button" class="btn btn-indigo btn-sm m-0" ng-click="c.addToBasket()">Add</button>
+        <button type="button" class="btn btn-indigo btn-sm m-0" ng-click="c.addToBasket(item)">Add</button>
+        <select ng-model="item.amount" ng-options="n for n in [] | range:1:item.available" placeholder="0"></select>
     </div>
 </div>

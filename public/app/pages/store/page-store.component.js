@@ -11,8 +11,14 @@ tvzStore.component('mainStore',{
             };
 
         this.updateItemsAndCategories();
-        this.addToBasket = function () {
-            console.log("Dodano u kosaru");
+        this.addToBasket = function (item) {
+            console.log(item);
+            let currentUser = JSON.parse(sessionStorage.getItem('loggedUser'));
+            if (currentUser.basket == null){
+                currentUser.basket = new Array();
+            }
+            currentUser.basket.push(item);
+            sessionStorage.setItem('loggedUser', JSON.stringify(currentUser));
         }
     },
     controllerAs:'c'

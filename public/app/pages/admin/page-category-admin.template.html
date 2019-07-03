@@ -38,19 +38,11 @@
 
             <fieldset class="form-group">
                 <label>Name:</label>
-                <input class="form-control" type="text" ng-model="categoryContr.new.name"/>
-            </fieldset>
-            <fieldset class="form-group">
-                <label>Price</label>
-                <input class="form-control" type="number" ng-model="categoryContr.new.price"/>
-            </fieldset>
-            <fieldset class="form-group">
-                <label>Available</label>
-                <input class="form-control" type="number" ng-model="categoryContr.new.available"/>
+                <input class="form-control" type="text" ng-model="categoryContr.new.categoryName"/>
             </fieldset>
 
-            <button type="button" class="btn btn-indigo btn-sm m-0" ng-click="categoryContr.addItem()">Add</button>
-            <button type="button" class="btn btn-indigo btn-sm m-0" ng-click="categoryContr.flipAddItem()">Cancel</button>
+            <button type="button" class="btn btn-indigo btn-sm m-0" ng-click="categoryContr.addCategory()">Add</button>
+            <button type="button" class="btn btn-indigo btn-sm m-0" ng-click="categoryContr.flipAddCategory()">Cancel</button>
 
 
         </div>

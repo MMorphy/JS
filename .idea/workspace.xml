@@ -2,23 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fca03b81-d5e8-4003-a093-5a485fef936b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/app/infrastructure/order.service.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/app/infrastructure/side-bar.component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/app/pages/store/page-basket.component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/app/pages/store/page-basket.template.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/app/pages/store/page-item-by-category.component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/app/pages/store/page-item-by-category.template.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/app/pages/store/page-store.component.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/app/pages/store/page-store.template.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/app/infrastructure/range.filter.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/routes/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/routes/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/infrastructure/app.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/infrastructure/app.component.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/app/infrastructure/app.routing.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/infrastructure/app.routing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/pages/admin/page-admin.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/pages/admin/page-admin.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/pages/admin/page-admin.template.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/pages/admin/page-admin.template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/infrastructure/nav-bar.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/infrastructure/nav-bar.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/infrastructure/order.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/infrastructure/order.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/infrastructure/side-bar.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/infrastructure/side-bar.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/infrastructure/user.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/infrastructure/user.service.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/app/pages/admin/page-category-admin.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/pages/admin/page-category-admin.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/pages/admin/page-category-admin.template.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/pages/admin/page-category-admin.template.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/app/pages/admin/page-item-admin.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/pages/admin/page-item-admin.component.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/app/pages/page-home.template.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/pages/page-home.template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/pages/admin/page-order-admin.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/pages/admin/page-order-admin.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/pages/admin/page-order-admin.template.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/pages/admin/page-order-admin.template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/pages/store/page-basket.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/pages/store/page-basket.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/pages/store/page-store.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/pages/store/page-store.component.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/app/pages/store/page-store.template.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/app/pages/store/page-store.template.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,142 +46,98 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.59807956">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/app/pages/store/page-store.component.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="34">
-                  <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/app/pages/store/page-store.template.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="5" column="74" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="74" />
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/app/pages/page-home.template.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret column="21" lean-forward="true" selection-start-column="21" selection-end-column="21" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/app/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="26" column="62" lean-forward="true" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/public/app/infrastructure/side-bar.component.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="4" column="108" selection-start-line="4" selection-start-column="108" selection-end-line="4" selection-end-column="108" />
-                  <folding>
-                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/app/infrastructure/nav-bar.component.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="102">
-                  <caret line="6" column="53" lean-forward="true" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="53" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/app/routes/api.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1955">
-                  <caret line="198" column="130" selection-start-line="198" selection-start-column="130" selection-end-line="198" selection-end-column="130" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/app/infrastructure/app.routing.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="26" column="33" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="33" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/app/pages/store/page-item-by-category.component.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="85">
-                  <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/app/infrastructure/app.component.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-item-admin.component.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="204">
-                  <caret line="12" column="15" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="12" selection-end-column="15" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-item-admin.template.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="26" column="89" selection-start-line="26" selection-start-column="77" selection-end-line="26" selection-end-column="89" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/public/app/infrastructure/category.service.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="272">
-                  <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-user-admin.template.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/infrastructure/side-bar.component.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/app/pages/store/page-basket.component.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-order-admin.component.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-order-admin.template.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/infrastructure/nav-bar.component.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="74" selection-start-line="6" selection-start-column="74" selection-end-line="6" selection-end-column="74" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/infrastructure/item.service.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="20" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/routes/api.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="369">
+              <caret line="239" column="50" lean-forward="true" selection-start-line="239" selection-start-column="50" selection-end-line="239" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/be.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/app/infrastructure/order.service.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -193,11 +149,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>sessionStorage.get</find>
-      <find>console.log</find>
-      <find>body.</find>
-      <find>message</find>
-      <find>storage</find>
       <find>rootscope</find>
       <find>error on</find>
       <find>profile</find>
@@ -222,8 +173,16 @@
       <find>$scope</find>
       <find>scope</find>
       <find>category</find>
+      <find>categoryId</find>
       <find>item</find>
+      <find>ba</find>
+      <find>BRAN</find>
+      <find>order</find>
+      <find>post</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -231,8 +190,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/db.js" />
-        <option value="$PROJECT_DIR$/public/application/infrastructure/user.service.js" />
         <option value="$PROJECT_DIR$/public/application/infrastructure/nav-bar.template.html" />
         <option value="$PROJECT_DIR$/application/routes/api.js" />
         <option value="$PROJECT_DIR$/public/application/pages/page-register.template.html" />
@@ -251,37 +208,39 @@
         <option value="$PROJECT_DIR$/public/app/pages/page-register.template.html" />
         <option value="$PROJECT_DIR$/public/app/pages/page-register.component.js" />
         <option value="$PROJECT_DIR$/public/app/pages/page-user-admin.component.js" />
-        <option value="$PROJECT_DIR$/public/app/infrastructure/nav-bar.component.js" />
         <option value="$PROJECT_DIR$/public/app/pages/page-admin.component.js" />
         <option value="$PROJECT_DIR$/public/app/pages/page-admin.template.html" />
         <option value="$PROJECT_DIR$/public/app/pages/page-user-admin.template.html" />
         <option value="$PROJECT_DIR$/public/app/pages/page-item-admin.template.html" />
         <option value="$PROJECT_DIR$/public/app/pages/page-item-admin.component.js" />
-        <option value="$PROJECT_DIR$/public/app/pages/admin/page-order-admin.template.html" />
-        <option value="$PROJECT_DIR$/public/app/pages/admin/page-order-admin.component.js" />
-        <option value="$PROJECT_DIR$/public/app/infrastructure/user.service.js" />
         <option value="$PROJECT_DIR$/public/app/infrastructure/item.service.js" />
         <option value="$PROJECT_DIR$/public/app/pages/admin/page-item-admin.template.html" />
         <option value="$PROJECT_DIR$/public/app/pages/admin/page-user-admin.template.html" />
         <option value="$PROJECT_DIR$/public/app/pages/admin/page-user-admin.component.js" />
         <option value="$PROJECT_DIR$/public/app/infrastructure/category.service.js" />
-        <option value="$PROJECT_DIR$/app/routes/api.js" />
-        <option value="$PROJECT_DIR$/public/app/pages/admin/page-category-admin.template.html" />
-        <option value="$PROJECT_DIR$/public/app/pages/admin/page-item-admin.component.js" />
-        <option value="$PROJECT_DIR$/public/app/pages/admin/page-category-admin.component.js" />
         <option value="$PROJECT_DIR$/public/app/pages/admin/page-admin.component.js" />
         <option value="$PROJECT_DIR$/public/app/pages/admin/page-admin.template.html" />
-        <option value="$PROJECT_DIR$/public/app/pages/store/page-basket.component.js" />
         <option value="$PROJECT_DIR$/public/app/pages/store/page-basket.template.html" />
         <option value="$PROJECT_DIR$/public/app/pages/store/page-item-by-category.template.html" />
-        <option value="$PROJECT_DIR$/public/app/pages/store/page-store.component.js" />
         <option value="$PROJECT_DIR$/public/app/infrastructure/app.component.js" />
-        <option value="$PROJECT_DIR$/public/app/infrastructure/app.routing.js" />
         <option value="$PROJECT_DIR$/public/app/pages/store/page-item-by-category.component.js" />
-        <option value="$PROJECT_DIR$/public/app/pages/store/page-store.template.html" />
         <option value="$PROJECT_DIR$/public/app/pages/page-home.template.html" />
+        <option value="$PROJECT_DIR$/public/app/infrastructure/range.fillter.js" />
+        <option value="$PROJECT_DIR$/public/app/pages/store/page-store.template.html" />
+        <option value="$PROJECT_DIR$/public/app/pages/store/page-store.component.js" />
+        <option value="$PROJECT_DIR$/public/app/infrastructure/user.service.js" />
+        <option value="$PROJECT_DIR$/public/app/pages/admin/page-category-admin.template.html" />
+        <option value="$PROJECT_DIR$/public/app/pages/admin/page-category-admin.component.js" />
+        <option value="$PROJECT_DIR$/public/app/pages/admin/page-item-admin.component.js" />
         <option value="$PROJECT_DIR$/public/app/index.html" />
+        <option value="$PROJECT_DIR$/public/app/infrastructure/app.routing.js" />
+        <option value="$PROJECT_DIR$/public/app/infrastructure/nav-bar.component.js" />
+        <option value="$PROJECT_DIR$/app/routes/api.js" />
+        <option value="$PROJECT_DIR$/public/app/infrastructure/order.service.js" />
         <option value="$PROJECT_DIR$/public/app/infrastructure/side-bar.component.js" />
+        <option value="$PROJECT_DIR$/public/app/pages/admin/page-order-admin.component.js" />
+        <option value="$PROJECT_DIR$/public/app/pages/admin/page-order-admin.template.html" />
+        <option value="$PROJECT_DIR$/public/app/pages/store/page-basket.component.js" />
       </list>
     </option>
   </component>
@@ -360,6 +319,14 @@
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="admin" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="JS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="JS" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
               <item name="store" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -417,7 +384,7 @@
       <workItem from="1562078023115" duration="117000" />
       <workItem from="1562078256290" duration="11527000" />
       <workItem from="1562101001343" duration="6257000" />
-      <workItem from="1562148730421" duration="33729000" />
+      <workItem from="1562148730421" duration="40359000" />
     </task>
     <task id="LOCAL-00001" summary="Login/Registration">
       <created>1562087115677</created>
@@ -475,11 +442,18 @@
       <option name="project" value="LOCAL" />
       <updated>1562175607906</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Store skeleton">
+      <created>1562183744540</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1562183744540</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="108133000" />
+    <option name="totallyTimeSpent" value="114763000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -494,8 +468,8 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.86545455" visible="true" weight="0.2228145" />
-      <window_info id="Structure" order="1" sideWeight="0.13454546" side_tool="true" visible="true" weight="0.2228145" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.88045233" visible="true" weight="0.2228145" />
+      <window_info id="Structure" order="1" sideWeight="0.11954766" side_tool="true" visible="true" weight="0.2228145" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
@@ -503,11 +477,11 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" visible="true" weight="0.40411702" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.49946696" weight="0.40411702" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.40411702" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -527,16 +501,10 @@
     <MESSAGE value="User administration&#10;*doing edit" />
     <MESSAGE value="User administration&#10;* Done&#10;* Improvement restrict admin user changes" />
     <MESSAGE value="Category admin&#10;*Zapeo na komunikaciji izmedju kontrolera" />
-    <option name="LAST_COMMIT_MESSAGE" value="Category admin&#10;*Zapeo na komunikaciji izmedju kontrolera" />
+    <MESSAGE value="Store skeleton" />
+    <option name="LAST_COMMIT_MESSAGE" value="Store skeleton" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package-lock.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -616,20 +584,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-order-admin.template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="6" lean-forward="true" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-order-admin.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="41" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/app/pages/page-register.component.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -651,13 +605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/be.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="17" column="57" lean-forward="true" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/nan/nan.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -672,24 +619,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-user-admin.template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-13">
-          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/express/lib/router/route.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="134" column="46" lean-forward="true" selection-start-line="134" selection-start-column="46" selection-end-line="134" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/infrastructure/user.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="32" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -707,16 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/infrastructure/order.service.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/pages/store/page-basket.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="2" lean-forward="true" selection-end-line="6" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/app/pages/store/page-basket.template.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -731,27 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-category-admin.template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="52" column="91" selection-start-line="52" selection-start-column="91" selection-end-line="52" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-category-admin.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/infrastructure/category.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="29" lean-forward="true" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../vesliga/News-App/public/app/pages/news/page-kolumne.template.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -762,69 +664,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/infrastructure/app.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/pages/store/page-store.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/app/pages/store/page-item-by-category.template.html">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="14" selection-start-column="14" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes/api.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1955">
-          <caret line="198" column="130" selection-start-line="198" selection-start-column="130" selection-end-line="198" selection-end-column="130" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/infrastructure/app.routing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="26" column="33" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/pages/store/page-item-by-category.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/infrastructure/nav-bar.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="53" lean-forward="true" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/infrastructure/item.service.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="26" column="62" lean-forward="true" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -835,37 +678,170 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-item-admin.component.js">
+    <entry file="file://$PROJECT_DIR$/public/app/infrastructure/app.component.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="15" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="12" selection-end-column="15" />
+        <state relative-caret-position="136">
+          <caret line="8" column="2" lean-forward="true" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/pages/store/page-item-by-category.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="6" lean-forward="true" selection-start-line="5" selection-start-column="6" selection-end-line="5" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/infrastructure/range.filter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/infrastructure/category.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-item-admin.template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="26" column="89" selection-start-line="26" selection-start-column="77" selection-end-line="26" selection-end-column="89" />
+        <state relative-caret-position="-8">
+          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-category-admin.template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="40" column="96" selection-start-line="40" selection-start-column="96" selection-end-line="40" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-category-admin.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="71" column="43" selection-start-line="71" selection-start-column="43" selection-end-line="71" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app/pages/store/page-store.template.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="74" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="74" />
+        <state relative-caret-position="153">
+          <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="37" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/pages/store/page-store.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="66" lean-forward="true" selection-start-line="23" selection-start-column="66" selection-end-line="23" selection-end-column="66" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-item-admin.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/infrastructure/app.routing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/infrastructure/user.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/infrastructure/item.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="20" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/be.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="23" column="16" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes/api.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="239" column="50" lean-forward="true" selection-start-line="239" selection-start-column="50" selection-end-line="239" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/infrastructure/order.service.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-user-admin.template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/public/app/infrastructure/side-bar.component.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="108" selection-start-line="4" selection-start-column="108" selection-end-line="4" selection-end-column="108" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-order-admin.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/pages/admin/page-order-admin.template.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/infrastructure/nav-bar.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="74" selection-start-line="6" selection-start-column="74" selection-end-line="6" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/app/pages/store/page-basket.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
         </state>
       </provider>
     </entry>

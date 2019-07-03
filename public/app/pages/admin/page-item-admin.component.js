@@ -56,7 +56,7 @@ tvzStore.component('itemAdministration',{
             this.deleteId=-1;
             ItemService.deleteItem(i).then(data=>{
                 if (data.status==200){
-                    this.items.splice(this.items.findIndex(c => c.id == i),1);
+                    this.updateItemsAndCategories();
                     alert('Successful item deletion!')
                 }
                 else{
@@ -80,9 +80,15 @@ tvzStore.component('itemAdministration',{
         };
         this.addItem = function(){
             ItemService.createItem(this.new).then(data =>{
-                ItemService.getAllItems().then(data => {
-                    this.items=data.data.items;
-                });
+                if(data.status==200) {
+                    this.updateItemsAndCategories();
+                    this.flipAddItem();
+                    alert("Successful item added!")
+                }
+                else {
+                    alert("Error while adding item!")
+                    this.flipAddItem();
+                }
             });
         }
     },

@@ -26,6 +26,9 @@ tvzStore.config(function ($stateProvider,$urlRouterProvider) {
     }).state('itemsByCategory',{
         url:'/items/:categoryName',
         component:'itemByCategory'
+    }).state('basket',{
+        url:'/basket',
+        component:'basket'
     });
     $urlRouterProvider.otherwise('/');
 })
