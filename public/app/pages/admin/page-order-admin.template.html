@@ -1,4 +1,65 @@
 <div class="container">
-    <p>Order admin</p>
-    <!--TODO napravi cijeli screen-->
+    <section>
+        <h2>Order administration</h2>
+        <table class="table table-striped table-bordered table-hover">
+            <th>ID</th>
+            <th>Create time</th>
+            <th>Address</th>
+            <th>Delivery Time</th>
+            <th>Finished</th>
+            <th>User</th>
+            <th>Item name</th>
+            <th>Amount</th>
+            <th>Edit</th>
+            <th>Delete</th>
+
+
+            <tr ng-repeat="order in c.orders">
+                <td>{{order.id}}</td>
+
+                <td>{{order.orderTS}}</td>
+
+                <td ng-hide="c.editId==order.id">{{order.address}}</td>
+                <td ng-hide="c.editId!=order.id"><input type="text" class="form-control" ng-model="order.address"></td>
+
+                <td ng-hide="c.editId==order.id">{{order.deliveryTime}}</td>
+                <td ng-hide="c.editId!=order.id"><input type="text" class="form-control" ng-model="order.deliveryTime"></td>
+
+                <td ng-hide="c.editId==order.id">{{order.finished}}</td>
+                <td ng-hide="c.editId!=order.id">
+                    <input type="checkbox" ng-checked="c.isFinished(order.id)" class="form-control" ng-model="order.newFinished">
+                </td>
+
+                <td>{{order.user_username}}</td>
+
+                <td ng-hide="c.editId==order.id">{{order.item_id}}</td>
+                <td ng-hide="c.editId!=order.id">
+                    <select  ng-options="item.id as item.name for item in c.items" ng-model="order.item_id"></select>
+                </td>
+
+                <td ng-hide="c.editId==order.id">{{order.itemAmount}}</td>
+                <td ng-hide="c.editId!=order.id">
+                    <select ng-model="order.itemAmount" ng-options="n for n in [] | range:1:c.findItemById(item_id).available"></select>
+                </td>
+
+
+                <td ng-hide="c.editId==order.id">
+                    <button type="button" class="btn btn-indigo btn-sm m-0" ng-click="c.setEdit(order.id)">Edit</button>
+                </td>
+
+                <td ng-hide="c.editId!=order.id">
+                    <button type="button" class="btn btn-indigo btn-sm m-0" ng-click="c.confirmEdit(order.id, order.newFinished)">Save</button>
+                </td>
+
+                <td ng-hide="c.deleteId==order.id">
+                    <button type="button" class="btn btn-indigo btn-sm m-0" ng-click="c.setDelete(order.id)">Delete</button>
+                </td>
+
+                <td ng-hide="c.deleteId!=order.id">
+                    <button type="button" class="btn btn-indigo btn-sm m-0" ng-click="c.confirmDelete(order.id)">Confirm</button>
+                </td>
+            </tr>
+        </table>
+
+    </section>
 </div>

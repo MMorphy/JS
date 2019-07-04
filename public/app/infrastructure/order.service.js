@@ -5,16 +5,16 @@ class OrderService {
         this.ordersUrl='/api/orders';
     }
 
-    getAllItems(){
+    getAllOrders(){
         return this.http.get(this.ordersUrl);
     }
-    deleteItem(id){
+    deleteOrder(id){
         return this.http.delete(this.ordersUrl+'/'+id);
     }
-    updateItem(order){
+    updateOrder(order){
         return this.http.put(this.ordersUrl,{data:order});
     }
-    createItem(order){
+    createOrder(order){
         return this.http.post(this.ordersUrl,{data:order});
     }
 }

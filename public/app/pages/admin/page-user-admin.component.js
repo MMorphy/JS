@@ -25,7 +25,6 @@ tvzStore.component('userAdministration',{
             this.editUsername=username;
         }
         this.confirmEdit = function(username){
-            // TODO Logout user and alert him
 
             this.editUsername="";
             let editedUser = this.findByUsername(username);

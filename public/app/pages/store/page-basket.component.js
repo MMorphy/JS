@@ -3,9 +3,9 @@ tvzStore.component('basket',{
     controller:function () {
 
         //TODO napravi sqush basketa
-        //TODO napravi order creation
-        //TODO napravi napravi edit basketa
-        //TODO napravi remove itema
+        // napravi order creation
+        // napravi napravi edit basketa
+        // napravi remove itema
     },
     controllerAs:'c'
 })

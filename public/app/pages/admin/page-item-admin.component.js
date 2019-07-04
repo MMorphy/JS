@@ -4,11 +4,9 @@ tvzStore.component('itemAdministration',{
         //helper and init functions
         this.updateItemsAndCategories = function(){
             ItemService.getAllItems().then(data => {
-                $scope.items=data.data.items;
-                this.items=$scope.items;
+                this.items=data.data.items;
             });
             CategoryService.getAllCategories().then(data=>{
-                $scope.categories = data.data.categories;
                 this.categories=data.data.categories;
             });
         };
