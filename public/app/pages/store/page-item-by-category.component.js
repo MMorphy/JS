@@ -25,6 +25,7 @@ tvzStore.component('itemByCategory',{
                 }
                 currentUser.basket.push(item);
                 sessionStorage.setItem('loggedUser', JSON.stringify(currentUser));
+                alert("Item added")
             }
         };
     },

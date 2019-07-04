@@ -23,6 +23,7 @@ tvzStore.component('mainStore',{
                 currentUser.basket.push(item);
                 sessionStorage.setItem('loggedUser', JSON.stringify(currentUser));
                 console.log(JSON.parse(sessionStorage.getItem('loggedUser')).basket);
+                alert("Item added");
             }
         };
     },
