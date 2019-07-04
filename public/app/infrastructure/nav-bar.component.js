@@ -4,7 +4,7 @@ tvzStore.component('navBar', {
               <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-left">
                     <li><a class="nav-link" ui-sref="home">Home</a></li>
-                    <li><a class="nav-link" ui-sref="basket">Shopping cart</a></li>
+                    <li><a class="nav-link" ui-sref="basket" ng-show="c.isLoggedIn">Shopping cart</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a class="nav-link" ui-sref="register" ng-show="!c.isLoggedIn"> Registration</a></li>       

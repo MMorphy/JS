@@ -1,1 +1,17 @@
-<p>1231231</p>
+<div class="wrapper">
+
+    <div class="col-lg-9">
+        <div class="panel panel-default" ng-repeat="item in c.items" style="float: left; width:150px;margin: 5px;">
+            <div class="panel-heading"><h4>{{item.name}}</h4></div>
+            <div class="panel-body">
+                Price:{{item.price}}<br>
+                <a ui-sref="itemsByCategory({categoryName:item.categoryName})">{{item.categoryName}}</a><br>
+                Quantity:{{item.available}}
+            </div>
+            <button type="button" class="btn btn-indigo btn-sm m-0" ng-click="c.addToBasket(item)">Add</button>
+            <select ng-model="item.amount" ng-options="n for n in [] | range:1:item.available"></select>
+        </div>
+    </div>
+    <side-bar></side-bar>
+
+</div>

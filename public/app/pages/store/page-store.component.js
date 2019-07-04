@@ -12,14 +12,19 @@ tvzStore.component('mainStore',{
 
         this.updateItemsAndCategories();
         this.addToBasket = function (item) {
-            console.log(item);
             let currentUser = JSON.parse(sessionStorage.getItem('loggedUser'));
-            if (currentUser.basket == null){
-                currentUser.basket = new Array();
+            if (currentUser == null){
+                alert("Please login to continue shopping!!")
             }
-            currentUser.basket.push(item);
-            sessionStorage.setItem('loggedUser', JSON.stringify(currentUser));
-        }
+            else{
+                if (currentUser.basket == null){
+                    currentUser.basket = new Array();
+                }
+                currentUser.basket.push(item);
+                sessionStorage.setItem('loggedUser', JSON.stringify(currentUser));
+                console.log(JSON.parse(sessionStorage.getItem('loggedUser')).basket);
+            }
+        };
     },
     controllerAs:'c'
 })

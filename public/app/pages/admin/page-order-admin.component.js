@@ -22,7 +22,7 @@ tvzStore.component('orderAdministration',{
             return this.orders.find(o=>o.id==id);
         };
         this.updateItems();
-        this.findItemById=function (id) {
+        $scope.findItemById=function (id) {
             this.items.find(i=>i.id==id);
         }
         this.isFinished=function (id) {
@@ -31,14 +31,11 @@ tvzStore.component('orderAdministration',{
             else
                 return true;
         };
+        this.formatDateTime = function (string) {
+            return string.replace(/[a-zA-Z]/g, ' ');
+        }
         this.updateOrders();
 
-
-        //TODO napravi edit
-        // *settanje finished
-        // *dinamicno alociranje amounta
-        // *actual save
-        // *formatiranje datuma
         //editing
         this.editId=-1;
         this.setEdit = function (id){
@@ -47,7 +44,22 @@ tvzStore.component('orderAdministration',{
         };
         this.confirmEdit = function (id) {
             this.editId=-1;
+            let finishedOrder = this.findOrderById(id);
+            if (finishedOrder.finished==0){
+                finishedOrder.finished=1;
+                finishedOrder.deliveryTime = this.formatDateTime(finishedOrder.deliveryTime);
+                console.log(finishedOrder.deliveryTime);
+                OrderService.updateOrder(finishedOrder).then(data=>{
+                    if (data.status == 200){
+                        alert("Order successfully finished!")
+                    }
+                    else
+                        alert("Error while finishing order!")
+                });
+            }
+
         };
+
         //deleting
         this.deleteId=-1
         this.setDelete = function (id){
