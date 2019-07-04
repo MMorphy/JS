@@ -1,12 +1,13 @@
 tvzStore.component('sideBar', {
-    // TODO Uljepsaj ovo
     template:`
-    <div id="sidebar-wrapper" class="col-lg-3 fixed" style="float: right">
-        <ul class="sidebar-nav">
-            <li ng-repeat="category in side.categories" > <a ui-sref="itemsByCategory({categoryName:category.categoryName})"> {{category.categoryName}} </a> </li>
-
-        </ul>
-    </div>    
+    <div class="panel panel-default col-lg-2" style="float: right; margin: 5px;">
+        <div class="panel-heading">
+            <h4>Categories</h4>
+        </div>
+        <div ng-repeat="category in side.categories" class="panel-body">
+            <a ui-sref="itemsByCategory({categoryName:category.categoryName})"> {{category.categoryName}} </a>
+        </div>
+    </div>
    `,
     controller:function (CategoryService) {
         this.updateCategories = function () {

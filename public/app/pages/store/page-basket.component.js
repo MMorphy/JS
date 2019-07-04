@@ -11,7 +11,9 @@ tvzStore.component('basket',{
                 });
                 this.orderedItems = this.getBasket();
             };
-
+            this.findItemById = function(i){
+                return this.orderedItems.find(item=>item.id==i);
+            };
             this.getBasket = function () {
                 let currentUser = JSON.parse(sessionStorage.getItem('loggedUser'));
                 this.currentUser = currentUser;
@@ -23,13 +25,19 @@ tvzStore.component('basket',{
                 let currentUser = JSON.parse(sessionStorage.getItem('loggedUser'));
                 currentUser.basket = basket;
                 sessionStorage.setItem('loggedUser', JSON.stringify(currentUser));
-            }
-            this.findItemById = function(i){
-                return this.orderedItems.find(item=>item.id==i);
             };
+            this.emptyBasket = function () {
+                let currentUser = JSON.parse(sessionStorage.getItem('loggedUser'));
+                currentUser.basket = new Array();
+                sessionStorage.setItem('loggedUser', JSON.stringify(currentUser));
+            };
+
             this.squashBasket = function(basketItems){
                 let newBasket = new Array();
                 let x;
+                if (basketItems == null){
+                    return newBasket;
+                }
                 for (x=0; x<basketItems.length; x++){
                     let itemToSearch = newBasket.find(item=>item.id==basketItems[x].id);
                     if(itemToSearch==null){
@@ -49,6 +57,9 @@ tvzStore.component('basket',{
             this.getTotal = function () {
                 let sum = 0;
                 let i;
+                if (this.orderedItems==null){
+                    return sum;
+                }
                 for (i=0; i<this.orderedItems.length; i++){
                     sum+= this.orderedItems[i].amount * this.orderedItems[i].price;
                 }
@@ -110,8 +121,7 @@ tvzStore.component('basket',{
             };
             this.addItem = function(){
                 let j;
-                console.log(this.new.address);
-                console.log(this.formatDatetime(Date.parse(this.new.deliveryTime)));
+                this.orderedItems = this.getBasket();
                 for (j=0; j<this.orderedItems.length; j++){
                     let orderToAdd={
                         address:this.new.address,
@@ -121,13 +131,29 @@ tvzStore.component('basket',{
                         item_id:this.orderedItems[j].id,
                         itemAmount:this.orderedItems[j].amount
                     };
+                    let availabilityMinus = this.orderedItems[j].available - this.orderedItems[j].amount;
+                    let itemToUpdate={
+                        id:this.orderedItems[j].id,
+                        available:availabilityMinus,
+                        name:this.orderedItems[j].name,
+                        price:this.orderedItems[j].price,
+                        category_id:this.orderedItems[j].category_id
+                    };
                     OrderService.createOrder(orderToAdd).then(data=>{
                         if (data.status==200) {
-                            alert("Successful category added!")
+                            alert("Successful category added!");
+                            this.flipAddItem();
                         }
                         else{
                             alert("Error while adding category!")
-                            this.flipAddCategory();
+                            this.flipAddItem();
+                        }
+                    });
+                    ItemService.updateItem(itemToUpdate).then(data=>{
+                        if (data.status==200){
+                            console.log("Item availability reduced!")
+                            this.emptyBasket();
+                            this.orderedItems = new Array();
                         }
                     })
                 }

@@ -9,12 +9,10 @@ tvzStore.component('orderAdministration',{
         this.updateOrders=function () {
             OrderService.getAllOrders().then(data=>{
                 this.orders=data.data.orders;
-                console.log(this.orders);
             })
         };
         this.updateItems=function () {
             ItemService.getAllItems().then(data => {
-                console.log(data.data.items);
                 this.items=data.data.items;
             });
         }
@@ -40,7 +38,6 @@ tvzStore.component('orderAdministration',{
         this.editId=-1;
         this.setEdit = function (id){
             this.editId=id;
-            console.log(this.items);
         };
         this.confirmEdit = function (id) {
             this.editId=-1;
@@ -48,7 +45,6 @@ tvzStore.component('orderAdministration',{
             if (finishedOrder.finished==0){
                 finishedOrder.finished=1;
                 finishedOrder.deliveryTime = this.formatDateTime(finishedOrder.deliveryTime);
-                console.log(finishedOrder.deliveryTime);
                 OrderService.updateOrder(finishedOrder).then(data=>{
                     if (data.status == 200){
                         alert("Order successfully finished!")

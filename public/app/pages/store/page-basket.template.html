@@ -46,7 +46,9 @@
             </tr>
         </table>
         <div class="panel panel-default" style="float: right; margin: 5px;">
-            <div class="panel-heading"><h4>Total:{{itemContr.getTotal()}}</h4></div>
+            <div class="panel-heading">
+                <h4>Total:{{itemContr.getTotal()}}</h4>
+            </div>
             <div class="panel-body">
                 <button type="button" ng-show="!itemContr.isAdding()" class="btn btn-indigo btn-sm m-0" ng-click="itemContr.flipAddItem()">Confirm order</button>
             </div>
