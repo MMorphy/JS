@@ -141,7 +141,7 @@ tvzStore.component('basket',{
                     };
                     OrderService.createOrder(orderToAdd).then(data=>{
                         if (data.status==200) {
-                            alert("Successful category added!");
+                            alert("Successfully ordered!");
                             this.flipAddItem();
                         }
                         else{
