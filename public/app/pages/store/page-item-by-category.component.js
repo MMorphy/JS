@@ -22,6 +22,7 @@ tvzStore.component('itemByCategory',{
             else{
                 if (currentUser.basket == null){
                     currentUser.basket = new Array();
+                    //sdasadsadsadassad
                 }
                 currentUser.basket.push(item);
                 sessionStorage.setItem('loggedUser', JSON.stringify(currentUser));
